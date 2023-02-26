@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calorie Calculator</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<header>
+		<h1>Calorie Calculator</h1>
+	</header>
+	<br>
+	<form onsubmit="calculateCalories(event)">
+		<div class="row">
+			<div class="col-sm-2">
+				<label for="weight">Weight (in kg):</label>
+				<input type="number" id="weight" name="weight" required>
+			</div>
+			<div class="col-sm-2">
+				<label for="height">Height (in cm):</label>
+				<input type="number" id="height" name="height" required>
+			</div>
+			<div class="col-sm-2">
+				<label for="age">Age:</label>
+				<input type="number" id="age" name="age" required>
+			</div>
+			<div class="col-sm-3">
+				<label for="gender">Gender:</label>
+				<select id="gender" name="gender" required>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+			<div class="col-sm-3">
+				<label for="activity">Activity Level:</label>
+				<select id="activity" name="activity" required>
+					<option value="sedentary">Sedentary</option>
+					<option value="lightly-active">Lightly Active</option>
+					<option value="moderately-active">Moderately Active</option>
+					<option value="very-active">Very Active</option>
+					<option value="extra-active">Extra Active</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="butt">
+				<button type="submit">Calculate</button>
+			</div>
+		</div>
+	</form>
+	</br>
+	<div class="card mb-3">
+		<div class="row g-0">
+			<div class="col-md-5">
+				<img src="./style/images/myriam-zilles-bB7oos2PNh8-unsplash.jpg" class="img-fluid rounded-start" alt="...">
+			</div>
+			<div class="col-md-7">
+			<div id="results"></div>
+		</div>
+		</div>
+	</div>
+	</main>
+	<footer>
+		<p>&copy; 2023 Calorie Calculator</p>
+	</footer>
+	<script src="./index.js"></script>
+</body>
+
+</html>
